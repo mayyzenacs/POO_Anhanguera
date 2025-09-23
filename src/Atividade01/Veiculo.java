@@ -1,3 +1,5 @@
+package Atividade01;
+
 public class Veiculo {
     private String marca;
     private String modelo;
@@ -10,7 +12,7 @@ public class Veiculo {
     }
 
     public void exibirDetalhes() {
-        System.out.println("-- Informações do Veiculo Cadastrado: --");
+        System.out.println("-- Informações do Atividade01.Veiculo Cadastrado: --");
         System.out.println("Marca: " + this.marca);
         System.out.println("Modelo: " + this.modelo);
         System.out.println("Ano: " + this.ano);

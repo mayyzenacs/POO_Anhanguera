@@ -1,3 +1,5 @@
+package Atividade01;
+
 public class Moto extends Veiculo {
     private double cilindradas;
 

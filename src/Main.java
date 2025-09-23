@@ -1,14 +1,43 @@
+abstract class Pessoa {
+    protected String nome;
+    protected int idade;
+    protected String endereco;
+
+
+    public Pessoa(String nome, int idade, String endereco) {
+        this.nome = nome;
+    }
+    public abstract void CalcularSalario();
+}
+
+class Aluno extends Pessoa {
+    private int Matricula;
+    public Aluno(String nome, int idade, String endereco, int Matricula) {
+        super(nome, idade, endereco);
+        this.Matricula = Matricula;
+    }
+
+    @Override
+    public void CalcularSalario() {
+        int[] arr = {300,600,1200,4500,600};
+        try {
+            // System.out.println(nome + " Calculando salario");
+            System.out.println(arr[10]);
+            throw new ArrayIndexOutOfBoundsException("fora do index");
+
+        }
+        catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println(e.getMessage());
+        }
+        finally {
+            System.out.println(nome + " Finalizando salario");
+        }
+    }
+}
+
 public class Main {
-
     public static void main(String[] args) {
-        Carro carro1 = new Carro("Toyota", "Yaris", 2019, 4);
-        Carro carro2 = new Carro("Chevrolet","Classic", 2011, 4);
-        Moto moto1 = new Moto("Yamaha", "MT-03", 2025, 1.0);
-        Moto moto2 = new Moto("Kawasaki", "Z-400", 2024, 1.5);
-
-        carro1.exibirDetalhes();
-        carro2.exibirDetalhes();
-        moto1.exibirDetalhes();
-        moto2.exibirDetalhes();
+        Aluno aluno1 = new Aluno("Lucas", 24, "Limoeiro", 4523);
+        aluno1.CalcularSalario();
     }
 }
