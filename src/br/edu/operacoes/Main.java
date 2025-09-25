@@ -1,3 +1,5 @@
+package br.edu.operacoes;
+
 abstract class OperacaoMatematica {
     public abstract double calcular(double a, double b) throws Exception;
 }
@@ -29,8 +31,8 @@ public class Main {
         OperacaoMatematica soma = new Soma();
         OperacaoMatematica divisao = new Divisao();
         try {
-            System.out.println("Soma resultado: " + soma.calcular(15,20));
-            System.out.println("Divisão resultado: " + divisao.calcular(15,0));
+            System.out.println("br.edu.operacoes.Soma resultado: " + soma.calcular(3456,344345));
+            System.out.println("Divisão resultado: " + divisao.calcular(55,2));
         } catch (Exception e) {
             System.out.println("Erro: " + e.getMessage());
         }
