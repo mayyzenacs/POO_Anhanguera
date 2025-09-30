@@ -5,18 +5,19 @@ public class Livro {
     String autor;
     int anoPublicacao;
 
-
     public Livro(String titulo, String autor, int anoPublicacao) {
         this.titulo = titulo;
         this.autor = autor;
         this.anoPublicacao = anoPublicacao;
     }
 
-    public Livro() {
+    @Override
+    public String toString() {
+        return "Título: " + titulo + " | Autor: " + autor + " | Ano: " + anoPublicacao;
     }
 
-    public String exibirInformacoes() {
-        return "titulo: " + titulo + "," + "Autor: " + autor + ", "+ "Ano de Publicação: " + anoPublicacao;
+    public void exibirInformacoes() {
+        System.out.println("---------------------------------");
+        System.out.println(this.toString());
     }
-
 }
